@@ -1,7 +1,13 @@
 FROM oven/bun:latest
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends git openjdk-17-jre-headless && \
+    apt-get install -y --no-install-recommends \
+    git \
+    openjdk-17-jre-headless \
+    python3 \
+    make \
+    g++ \
+    && ln -s /usr/bin/python3 /usr/bin/python && \
     rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
 
 WORKDIR /app
