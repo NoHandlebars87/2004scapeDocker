@@ -6,11 +6,13 @@ Create a working directory for the server files.
 
 ---
 
-2. Download or create the Dockerfile
+2. Download or create the Dockerfile and docker-compose.yml
 
 Place the Dockerfile inside your project directory.
 
 This is where you set the revision version (e.g., 225 or 244) by editing the -b flags in the git clone lines.
+
+Place the docker-compose.yml inside your project directory.
 
 ---
 
