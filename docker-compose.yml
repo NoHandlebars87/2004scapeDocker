@@ -1,0 +1,8 @@
+services:
+  lostcity:
+    build: .
+    ports:
+      - "43594:43594"
+      - "8888:8888"
+    stdin_open: true
+    tty: true
