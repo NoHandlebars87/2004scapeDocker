@@ -2,7 +2,7 @@ FROM oven/bun:latest
 
 # What version are you interested in? example - 225 = May 18, 2004 // 244 = June 28, 2004
 # If you change versions, you will need to rebuild this cleanly / with nocache
-ARG REV=244
+ARG REV=225
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
