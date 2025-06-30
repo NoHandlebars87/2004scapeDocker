@@ -8,15 +8,14 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         curl \
         gnupg \
-        ca-certificates && \
-    curl -fsSL https://ftp-master.debian.org/keys/archive-key-12.asc | gpg --dearmor -o /etc/apt/trusted.gpg.d/debian-archive-keyring.gpg && \
-    apt-get update && \
-    apt-get install -y --no-install-recommends \
+        ca-certificates \
         git \
         openjdk-17-jre-headless \
         python3 \
         make \
         g++ && \
+    curl -fsSL https://ftp-master.debian.org/keys/archive-key-12.asc | \
+        gpg --dearmor -o /etc/apt/trusted.gpg.d/debian-archive-keyring.gpg && \
     ln -s /usr/bin/python3 /usr/bin/python && \
     rm -rf /var/lib/apt/lists/*
 
